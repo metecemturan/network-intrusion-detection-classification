@@ -1,0 +1,56 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+.env*/ 
+*.venv/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VSCode settings
+.vscode/
+
+# PyCharm settings
+.idea/
+
+# Logs
+*.log
+
+# Environment files
+.env
+*.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Data files
+*.csv
+*.xlsx
+*.parquet
+*.pkl
+*.npz
+
+# Kaggle datasets
+kaggle.json
+dataset/
+data/
+input/
+
+# Model files
+*.h5
+*.pt
+*.pth
+*.joblib
+*.sav
+
+# Cache folders
+.cache/
+logs/
+runs/
