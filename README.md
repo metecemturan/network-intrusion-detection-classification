@@ -41,9 +41,5 @@ The notebook generates several helpful plots, including:
 
 These visualizations help understand dataset structure and validate each preprocessing step.
 
----
 
-## ▶️ Run
 
-```bash
-jupyter notebook
