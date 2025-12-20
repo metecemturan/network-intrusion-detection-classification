@@ -11,7 +11,7 @@ The CIC-IDS2017 dataset contains several days of real network traffic including 
 Raw data is noisy, highly imbalanced, and contains redundant or corrupted numeric fields.  
 Therefore, a strong preprocessing pipeline is essential before training ML models.
 
-This project implements:
+## ⚙️ Preprocessing Steps
 
 - Loading and merging CIC-IDS2017 CSV files  
 - Cleaning invalid values (INF, -INF, sensor errors, extremely large values)  
@@ -23,23 +23,29 @@ This project implements:
 - Computing class weights to address class imbalance  
 - PCA visualization to observe traffic distribution  
 
-The final preprocessed dataset is ready for training models such as  
-Random Forest, XGBoost, CatBoost, Logistic Regression, and SVM.
+## 📈 Model Performance (Results)
+
+The performance of three machine learning models was evaluated using **5-Fold Cross-Validation**.  
+Due to strong class imbalance in intrusion detection datasets, **macro-averaged metrics** are emphasized.
+
+### 🔍 Evaluation Metrics
+- **Precision (Macro)**
+- **Recall (Macro)**
+- **F1-score (Macro)** 
+- **F1-score (Weighted)**
+- **Overfit Gap** – difference between training and test macro F1
 
 ---
 
-## 📊 Visualizations
+### 📊 Performance Comparison
 
-The notebook generates several helpful plots, including:
+| Model               | Precision (Macro) | Recall (Macro) | F1 (Macro) | F1 (Weighted) | Overfit Gap |
+|--------------------|-------------------|----------------|------------|---------------|-------------|
+| Logistic Regression | 0.7985            | 0.8887         | 0.7942     | 0.9889        | 0.0060      |
+| Random Forest       | 0.8908            | 0.8685         | 0.8753     | 0.9987        | 0.1247      |
+| XGBoost             | 0.9355            | 0.8881         | 0.8982     | 0.9987        | 0.0483      |
 
-- PCA scatter plot with class labels  
-- Raw vs cleaned class distributions  
-- Correlation heatmap  
-- Heatmap of removed features  
-- Histogram comparisons (before vs after cleaning)  
-- Skewness analysis of numeric features  
-
-These visualizations help understand dataset structure and validate each preprocessing step.
+---
 
 
 
